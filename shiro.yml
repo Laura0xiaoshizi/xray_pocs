@@ -1,0 +1,12 @@
+name: poc-yaml-shiro
+rules:
+  - method: GET
+    path: /
+    headers:
+      Cookie: rememberMe=1
+    expression: |
+      response.headers["Set-Cookie"].contains("rememberMe=deleteMe")
+detail:
+  author: laura_lion
+  links:
+    - https://fuck.com
